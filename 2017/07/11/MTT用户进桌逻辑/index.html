@@ -96,7 +96,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/07/11/MTT用户进桌逻辑/index.html">
 <meta property="og:site_name" content="Hu Dongwen&#39;s blog">
 <meta property="og:description" content="MTT用户进桌逻辑–mtt_desk.user_enter()触发情况 增购时，用户不在牌桌内，重新进桌(mtt_desk.addon()) 重购时，用户不在牌桌内，重新进桌(mtt_desk.rebuy()) 玩家并桌进来(mtt_desk.send_in_player()) 用户发起请求进桌(开赛，断线重连)(mtt_game.redirect_user_enter_desk())">
-<meta property="og:updated_time" content="2017-07-11T08:38:42.213Z">
+<meta property="og:updated_time" content="2017-07-11T11:48:05.212Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MTT用户进桌逻辑--mtt_desk.user_enter()">
 <meta name="twitter:description" content="MTT用户进桌逻辑–mtt_desk.user_enter()触发情况 增购时，用户不在牌桌内，重新进桌(mtt_desk.addon()) 重购时，用户不在牌桌内，重新进桌(mtt_desk.rebuy()) 玩家并桌进来(mtt_desk.send_in_player()) 用户发起请求进桌(开赛，断线重连)(mtt_game.redirect_user_enter_desk())">
@@ -367,7 +367,7 @@ op4=>operation: 从旁观用户组中移除该用户
 op5=>operation: 保存用户桌子信息(xuser_tmp)
 op6=>operation: 设置玩家托管状态，是否桌内(如果是需要审批的报名,是系统帮他进桌,要设置为False)
 op7=>operation: 加入来过该牌局用户列表
-sub1=>subroutine: 用户坐下(mtt_desk.user_auto_sit_down())
+sub1=>subroutine: 用户坐下(mtt_desk.user_auto_sit_down()):>/2017/07/11/MTT用户坐下逻辑/#more
 e=>end
 st->cond1
 cond1(yes)->op1->cond2
@@ -375,7 +375,7 @@ cond1(no)->op2->cond2
 cond2(yes)->op3->op5->op6->op7->e
 cond2(no)->sub1->cond3
 cond3(yes)->op5->op6->op7->e
-cond3(no)->op4->op5->op6->op7->e</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
+cond3(no)->op4->op5->op6->op7->e</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
 
       
     </div>
@@ -496,7 +496,7 @@ cond3(no)->op4->op5->op6->op7->e</textarea><textarea id="flowchart-0-options" st
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -507,7 +507,7 @@ cond3(no)->op4->op5->op6->op7->e</textarea><textarea id="flowchart-0-options" st
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -518,7 +518,7 @@ cond3(no)->op4->op5->op6->op7->e</textarea><textarea id="flowchart-0-options" st
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
